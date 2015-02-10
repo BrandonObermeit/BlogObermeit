@@ -1,5 +1,5 @@
 <?php
-    require_once(__DIR__ . "/../model/database.php");
+    require_once(__DIR__ . "/../model/config.php");
     
     $connection = new mysqli($host, $username, $password);
     
@@ -23,7 +23,7 @@
             . "id int(11) NOT NULL AUTO_INCREMENT,"
             . "title varchar(255) NOT NULL,"
             . "post text NOT NULL,"
-            . "PRIMARY KEY (ID)");
+            . "PRIMARY KEY (id))");
  
     if($query) {
         echo "<p>succesfully created table: posts</p>";
