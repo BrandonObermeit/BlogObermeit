@@ -11,7 +11,7 @@ class Database {
         $this->host = $host;
         $this->username = $username;
         $this->password = $password;
-        $this->database = $$database;
+        $this->database = $database;
         
         $this->connection = new mysqli($host, $username, $password);
     
@@ -32,7 +32,7 @@ class Database {
     }
     }
     
-    public function openConnectiion(){
+    public function openConnection(){
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
         
         if ($this->connection->connect_error) {
@@ -40,7 +40,7 @@ class Database {
         }
     }
     
-    public function closeConection(){
+    public function closeConnection(){
         if(isset($this->connection)) {
             $this->connection->close();
         }
